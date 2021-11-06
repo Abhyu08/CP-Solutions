@@ -1,0 +1,16 @@
+[1;31m
+Start test 1[0m
+R> This text is simple to read! It has on average less than 10 words per sentence.
+EASY
+[1;31m
+Start test 2[0m
+g> This text is hard to read. It contains a lot of sentences as well as a lot of words in each sentence
+HARD
+[1;31m
+Start test 3[0m
+Ñ> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1. 1. 1.
+HARD
+[1;31m
+Start test 4[0m
+z> 12, 12 13 14 14 14, 12 21 23 89! 75 12, 134 241 123, 123 123 123, 123 123 123? 123, 123 123 123 23 123 213 123 123 123.
+EASY
