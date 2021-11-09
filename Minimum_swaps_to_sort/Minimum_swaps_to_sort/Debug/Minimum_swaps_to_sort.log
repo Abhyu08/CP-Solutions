@@ -1,0 +1,4 @@
+﻿  Minimum_swaps_to_sort.cpp
+C:\Users\ghata\source\repos\Minimum_swaps_to_sort\Minimum_swaps_to_sort\Minimum_swaps_to_sort.cpp(20,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ghata\source\repos\Minimum_swaps_to_sort\Minimum_swaps_to_sort\Minimum_swaps_to_sort.cpp(23,28): warning C4018: '<': signed/unsigned mismatch
+  Minimum_swaps_to_sort.vcxproj -> C:\Users\ghata\source\repos\Minimum_swaps_to_sort\Debug\Minimum_swaps_to_sort.exe

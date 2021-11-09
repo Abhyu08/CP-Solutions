@@ -1,0 +1,6 @@
+﻿  581. Shortest Unsorted Continuous Subarray.cpp
+C:\Users\ghata\source\repos\581. Shortest Unsorted Continuous Subarray\581. Shortest Unsorted Continuous Subarray\581. Shortest Unsorted Continuous Subarray.cpp(14,20): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\ghata\source\repos\581. Shortest Unsorted Continuous Subarray\581. Shortest Unsorted Continuous Subarray\581. Shortest Unsorted Continuous Subarray.cpp(15,20): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\ghata\source\repos\581. Shortest Unsorted Continuous Subarray\581. Shortest Unsorted Continuous Subarray\581. Shortest Unsorted Continuous Subarray.cpp(19,46): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ghata\source\repos\581. Shortest Unsorted Continuous Subarray\581. Shortest Unsorted Continuous Subarray\581. Shortest Unsorted Continuous Subarray.cpp(31,27): warning C4018: '<': signed/unsigned mismatch
+  581. Shortest Unsorted Continuous Subarray.vcxproj -> C:\Users\ghata\source\repos\581. Shortest Unsorted Continuous Subarray\Debug\581. Shortest Unsorted Continuous Subarray.exe
