@@ -1,2 +1,2 @@
 # CP-Solutions
-Solutions To CP Questions
+Personally Solved Solutions To CP Questions
