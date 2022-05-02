@@ -47,5 +47,5 @@ Graphs:
 ```
 
 ```
-                                                   ## Suggestions are always welcome !!
+                                ## Suggestions are always welcome !!
 ```
