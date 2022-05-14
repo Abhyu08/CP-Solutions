@@ -17,6 +17,10 @@ Explanation :
 (1,1) -> (1,2) -> (3, 2)
 From a cell (i, j) we can move to (i+j, j) or (i, j+i).
 
+input: 2 2
+Output : -1
+Explanation :
+If we cannot reach at position with the rules mentioned then return -1
  */
 class UserMainCode {
     static List<Integer> list = new ArrayList<>();
