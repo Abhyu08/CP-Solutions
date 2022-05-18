@@ -1,14 +1,18 @@
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 
 // Q. https://leetcode.com/problems/insert-interval/
-// Case Conditions!
-// Q. https://discord.com/channels/476793160471674900/694950332719038544/976344842806394962
+
+// cases. https://discord.com/channels/476793160471674900/694950332719038544/976344842806394962
+
 public class Solution {
 
-
+//Original Approach Lengthy Approach
+/*
     public static int[][] insert(int[][] intervals, int[] newInterval) {
 
         int index = 0;
@@ -65,7 +69,7 @@ public class Solution {
                 }
                 flag = false;
 
-            } else if (x < intervals[i][0] && y < intervals[i][0] && flag ) {
+            } else if (x < intervals[i][0] && y < intervals[i][0] && flag) {
                 newSet[index][0] = x;
                 newSet[index++][1] = y;
                 flag = false;
@@ -102,28 +106,68 @@ public class Solution {
         }
         return newarr;
     }
+*/
 
+//Optimistic Approach.
+    public static int[][] insert(int[][] intervals, int[] newInterval) {
+
+        List<int[]> list = new ArrayList<>();
+
+        int index = 0, n = intervals.length;
+
+        //1.To add all non-overlapping intervals..
+        while (index < n && intervals[index][1] < newInterval[0]) {
+            list.add(intervals[index++]);
+        }
+        //2.To insert new overlapping interval in the present sequence
+        while (index < n && intervals[index][1] <= newInterval[1]) {
+            newInterval[0] = Math.min(newInterval[0], intervals[index][0]);
+            newInterval[1] = Math.max(newInterval[1], intervals[index][1]);
+            index++;
+        }
+        list.add(newInterval); //here condition satisfy where newInterval is to be added at last.
+        //3.To add remaining non-overlapping intervals...
+        while (index < n) {
+            list.add(intervals[index++]);
+        }
+
+        return list.toArray(new int[list.size()][2]);
+    }
 
     //Driver Code // leetcode input to generalized input
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String input = br.readLine();
-        String[] newinterval = br.readLine().split(",");
-        int[] newInterval = new int[2];
-        newInterval[0] = Integer.parseInt(newinterval[0].replace("[", ""));
-        newInterval[1] = Integer.parseInt(newinterval[1].replace("]", ""));
-        input = input.substring(1, input.length() - 1);
-        String[] input1 = input.split(",");
-        int[][] final_input = new int[input1.length / 2][2];
-        for (int i = 0, index = 0; i < input1.length; i += 2) {
-            final_input[index][0] = Integer.parseInt(input1[i].replace("[", "").replace("]", ""));
-            final_input[index++][1] = Integer.parseInt(input1[i + 1].replace("[", "").replace("]", ""));
 
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+
+        //Inputted from file..
+        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\user_name\\Desktop\\input_file.txt"));
+        String input = new String();
+        while ((input = br.readLine()) != null) {
+
+            //        String input = br.readLine();
+            String[] newinterval = br.readLine().split(",");
+
+
+            int[] newInterval = new int[2];
+            input = input.substring(1, input.length() - 1);
+            String[] input1 = input.split(",");
+            newInterval[0] = Integer.parseInt(newinterval[0].replace("[", ""));
+            newInterval[1] = Integer.parseInt(newinterval[1].replace("]", ""));
+            int[][] final_input = new int[input1.length / 2][2];
+
+            for (int i = 0, index = 0; i < input1.length; i += 2) {
+                final_input[index][0] = Integer.parseInt(input1[i].replace("[", "").replace("]", ""));
+                final_input[index++][1] = Integer.parseInt(input1[i + 1].replace("[", "").replace("]", ""));
+
+            }
+            int[][] result = Solution.insert(final_input, newInterval);
+            for (int[] ints : result) {
+                System.out.println(ints[0] + " " + ints[1]);
+            }
+            System.out.println("-----------------------------------------");
         }
-        int[][] result = Solution.insert(final_input, newInterval);
-        for (int[] ints : result) {
-            System.out.println(ints[0] + " " + ints[1]);
-        }
+
         br.close();
     }
 }
