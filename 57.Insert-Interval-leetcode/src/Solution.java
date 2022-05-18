@@ -4,6 +4,8 @@ import java.io.InputStreamReader;
 
 
 // Q. https://leetcode.com/problems/insert-interval/
+// Case Conditions!
+// Q. https://discord.com/channels/476793160471674900/694950332719038544/976344842806394962
 public class Solution {
 
 
