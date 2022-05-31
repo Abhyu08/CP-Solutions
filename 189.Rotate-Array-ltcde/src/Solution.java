@@ -36,7 +36,12 @@ class Solution {
                 nums[index % len] = -9797;
             }
         }
-
+        //4.By reversing array Solution with O(n) with O(1) space-complexity.. ==> 2ms
+        //reverse whole and again for both 
+        //EX:
+        // 1 2 3 4 5 6
+        // 2
+        // 6 5 4 3 2 1 --> 5 6 4 3 2 1 --> 5 6 1 2 3 4
 
         for (int var : nums)
             System.out.print(var + " ");
