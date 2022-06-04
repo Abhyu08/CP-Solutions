@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Solution {
     public static void NQueens(int[][] matrix, int row, int col, int total_q, int Q_placed, String str) {
@@ -57,7 +58,10 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int[][] matrix = new int[4][4];
-        NQueens(matrix, 0, 0, 4, 0, "");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Queen Chessboard size : ");
+        int n = sc.nextInt();
+        int[][] matrix = new int[n][n];
+        NQueens(matrix, 0, 0, n, 0, "");
     }
 }
